@@ -1,6 +1,8 @@
-이 맞춤법 검사 확장은 류창우씨가 개발 중인 공개 한글 맞춤법 
-사전(http://code.google.com/p/spellcheck-ko/)을 기반으로
-만든 확장입니다.
+이 한국어 맞춤법 검사 확장은 hunspell 한국어 데이터 프로젝트
+(https://github.com/changwoo/hunspell-dict-ko/)의 데이터를 기반으로
+만든 확장입니다. 맞춤법 사전 관련 문의는 위 프로젝트에 하시고,
+확장 자체에 대한 문의는 아래 주소로 하시면 됩니다.
+(https://github.com/jihuichoi/korean-spellchecker)
 
 이 확장은 공개 한글 맞춤법 사전과 동일하게 3중 라이센스
 (GPL/LGPL/MPL)로 배포됩니다.
