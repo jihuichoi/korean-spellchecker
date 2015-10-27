@@ -5,7 +5,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>ko-KR@dictionaries.addons.mozilla.org</em:id>
     <em:unpack>true</em:unpack>
-    <em:version>0.5.6.1</em:version>
+    <em:version>0.5.6.2</em:version>
     <em:creator>Jihui Choi</em:creator>
     <em:contributor>Changwoo Ryu</em:contributor>
     <em:homepageURL>http://addons.mozilla.org/en-US/firefox/addon/korean-spellchecker/</em:homepageURL>
@@ -13,14 +13,14 @@
       <Description>
      <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 	<em:minVersion>3.0</em:minVersion>
-	<em:maxVersion>50.*</em:maxVersion>
+	<em:maxVersion>45.0</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:targetApplication>
       <Description>
      <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
 	<em:minVersion>2.0</em:minVersion>
-	<em:maxVersion>50.*</em:maxVersion>
+	<em:maxVersion>45.0</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:name>Korean Dictionary</em:name>
