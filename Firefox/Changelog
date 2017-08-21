@@ -1,6 +1,14 @@
-이 확장은 한국어 맞춤법을 검사할 수 있는 확장으로 hunspell 한국어 데이터 
-프로젝트의 데이터를 기반으로 만들었습니다. hunspell 한국어 데이터와 동일하게
-3중 라이센스 (GPL/LGPL/MPL)로 배포됩니다.
+이 확장은 한국어 맞춤법을 검사할 수 있는 확장입니다.
+hunspell 한국어 데이터 프로젝트의 사전데이터를 사용하며, hunspell 한국어 데이터
+와 동일하게 다음 라이센스 정책을 따라 배포됩니다.
+(https://groups.google.com/forum/#!topic/spellcheck-ko/NlM9DA0GHWY)
+	- 3중 라이센스 (GPL/LGPL/MPL)
+	- 크리에이티브 커먼즈 저작자표시 4.0 국제 라이선스(CC BY 4.0)
+
+This uses the dictionary of 'hunspell 한국어 데이터' project as a dictionary
+and it follows the license of 'hunspell 한국어 데이터' project.
+	- 3 licences(GPL/LGPL/MPL).
+	- Creative Commons license Attribution 4.0 International (CC BY 4.0)
 
 문의 : https://github.com/jihuichoi/korean-spellchecker
 
@@ -8,6 +16,12 @@
 : https://github.com/spellcheck-ko/hunspell-dict-ko/
 
 ----------
+
+0.6.3-1 (2017/08/21)
+- hunspell-dict-ko 업데이트(0.6.3)
+
+0.6.2-1 (2017/08/21)
+- hunspell-dict-ko 업데이트(0.6.2)
 
 0.6.0-1 (2017/02/20)
 - hunspell-dict-ko 업데이트(0.6.0)
