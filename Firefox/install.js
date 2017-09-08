@@ -1,4 +1,4 @@
-var err = initInstall("Korean Dictionary", "ko-KR@dictionaries.addons.mozilla.org", "0.6.3-1");
+var err = initInstall("Korean Dictionary", "ko-KR@dictionaries.addons.mozilla.org", "0.6.4-1");
 if (err != SUCCESS)
     cancelInstall();
 
