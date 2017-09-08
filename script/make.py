@@ -42,7 +42,7 @@ if __name__ == "__main__":
 	cmd += 'wget -P dictionary https://github.com/spellcheck-ko/hunspell-dict-ko/releases/download/%s/ko-aff-dic-%s-for-hunspell-1.2.8.zip;' % (new_ver, new_ver)
 	cmd += 'unzip -d dictionary dictionary/ko-aff-dic-%s-for-hunspell-1.2.8.zip;' % new_ver
 	print(cmd.replace(";","\n"))
-#	os.system(cmd)
+	os.system(cmd)
 
 	#리브레오피스 확장 만들기
 	cmd  = '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/LICENSE* LibreOffice;' % new_ver
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 	cmd += '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/ko.dic LibreOffice/dictionaries/ko-KR.dic;' % new_ver
 	cmd += "sed -i 's/%s-1/%s-1/g' LibreOffice/description.xml;" % (old_ver, new_ver)
 	print(cmd.replace(";","\n"))
-#	os.system(cmd)
+	os.system(cmd)
 	
 	
 	#파이어폭스 확장 만들기
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 	cmd += "sed -i 's/%s-1/%s-1/g' Firefox/install.js;" % (old_ver, new_ver)
 	cmd += "sed -i 's/%s-1/%s-1/g' Firefox/install.rdf;" % (old_ver, new_ver)
 	print(cmd.replace(";","\n"))
-#	os.system(cmd)
+	os.system(cmd)
 	
 	
 	#zip 으로 묶기
@@ -71,7 +71,7 @@ if __name__ == "__main__":
 	cmd += 'zip -r ../bin/Korean_spell-checker-%s-1_LibO.oxt ./*;' % new_ver
 	cmd += 'cd ..'
 	print(cmd.replace(";","\n"))
-#	os.system(cmd)
+	os.system(cmd)
 
 
 
