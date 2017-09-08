@@ -35,13 +35,18 @@ and it follows the license of 'hunspell 한국어 데이터' project.
 
 플러그인 생성
 
+
 1) Changelog 변경
+
 	$ vi LibreOffice/Changelog
 	$ vi Firefox/Changelog
 
+
 2) 생성 스크립트 실행
+
 	$ ./script/make.py 새 버전
 	예) ./script/make.py 0.6.4
+
 
 3) 새로 생성된 플러그인
 	bin/Korean_spell-checker-버전-1_FF.xpi
