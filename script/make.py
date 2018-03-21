@@ -1,12 +1,12 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import sys
+import os, sys
 import subprocess
 
 def usage():
 	print("./script/make.py 새버전")
-	print("예) ./script/make.py 0.6.5")
+	print("예) ./script/make.py 0.7.1")
 	
 	print("Changelog 는 수동 변경 필요")
 	sys.exit()
@@ -34,29 +34,35 @@ if __name__ == "__main__":
 	new_ver = sys.argv[1]
 	print("new version: %s" % new_ver)
 	
-	path = '/data/projects/korean-spellchecker'
+	path = os.path.dirname(os.path.abspath(__file__)) + '/..'
 
 
 	#사전 파일 다운로드
 	cmd  = 'cd %s;' % path
-	cmd += 'wget -P dictionary https://github.com/spellcheck-ko/hunspell-dict-ko/releases/download/%s/ko-aff-dic-%s-for-hunspell-1.2.8.zip;' % (new_ver, new_ver)
-	cmd += 'unzip -d dictionary dictionary/ko-aff-dic-%s-for-hunspell-1.2.8.zip;' % new_ver
+	if int(new_ver.replace('.', '')) < 71: 
+		dict_filename = 'ko-aff-dic-%s-for-hunspell-1.2.8' % new_ver
+		cmd += 'wget -P dictionary https://github.com/spellcheck-ko/hunspell-dict-ko/releases/download/%s/%s.zip;' % (new_ver, dict_filename)
+		cmd += 'unzip -d dictionary dictionary/ko-aff-dic-%s-for-hunspell-1.2.8;' % (new_ver)
+	else: #0.7.1 버전 이후부터 hunspell 1.2.8 버전을 따로 제공하지 않음
+		dict_filename = 'ko-aff-dic-%s' % new_ver
+		cmd += 'wget -P dictionary https://github.com/spellcheck-ko/hunspell-dict-ko/releases/download/%s/%s.zip;' % (new_ver, dict_filename)
+		cmd += 'unzip -d dictionary dictionary/ko-aff-dic-%s;' % (new_ver)
 	print(cmd.replace(";","\n"))
 	os.system(cmd)
-
+	
 	#리브레오피스 확장 만들기
-	cmd  = '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/LICENSE* LibreOffice;' % new_ver
-	cmd += '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/ko.aff LibreOffice/dictionaries/ko-KR.aff;' % new_ver
-	cmd += '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/ko.dic LibreOffice/dictionaries/ko-KR.dic;' % new_ver
+	cmd  = '\\cp -f dictionary/%s/LICENSE* LibreOffice;' % dict_filename
+	cmd += '\\cp -f dictionary/%s/ko.aff LibreOffice/dictionaries/ko-KR.aff;' % dict_filename
+	cmd += '\\cp -f dictionary/%s/ko.dic LibreOffice/dictionaries/ko-KR.dic;' % dict_filename
 	cmd += "sed -i 's/%s-1/%s-1/g' LibreOffice/description.xml;" % (old_ver, new_ver)
 	print(cmd.replace(";","\n"))
 	os.system(cmd)
 	
 	
 	#파이어폭스 확장 만들기
-	cmd  = '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/LICENSE* Firefox;' % new_ver
-	cmd += '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/ko.aff Firefox/dictionaries/ko-KR.aff;' % new_ver
-	cmd += '\\cp -f dictionary/ko-aff-dic-%s-for-hunspell-1.2.8/ko.dic Firefox/dictionaries/ko-KR.dic;' % new_ver
+	cmd  = '\\cp -f dictionary/%s/LICENSE* Firefox;' % dict_filename
+	cmd += '\\cp -f dictionary/%s/ko.aff Firefox/dictionaries/ko-KR.aff;' % dict_filename
+	cmd += '\\cp -f dictionary/%s/ko.dic Firefox/dictionaries/ko-KR.dic;' % dict_filename
 	cmd += "sed -i 's/%s-1/%s-1/g' Firefox/install.js;" % (old_ver, new_ver)
 	cmd += "sed -i 's/%s-1/%s-1/g' Firefox/install.rdf;" % (old_ver, new_ver)
 	print(cmd.replace(";","\n"))
@@ -73,5 +79,10 @@ if __name__ == "__main__":
 	print(cmd.replace(";","\n"))
 	os.system(cmd)
 
+
+	#불필요한 디렉토리 삭제
+	cmd = 'rm -rf dictionary/%s' % dict_filename
+	print(cmd.replace(";","\n"))
+	os.system(cmd)
 
 
