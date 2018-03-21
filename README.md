@@ -35,20 +35,29 @@ and it follows the license of 'hunspell 한국어 데이터' project.
 
 ## 플러그인 생성
 
-
-1) Changelog 변경
+1) 소스 다운로드
 ```
+$ git clone https://github.com/jihuichoi/korean-spellchecker.git korean-spellchecker
+```
+
+2) Changelog 변경
+```
+$ cd korean-spellchecker
 $ vi LibreOffice/Changelog
 $ vi Firefox/Changelog
+
+다음 예시와 같은 형식으로 추가
+0.7.1-1 (2018/03/21)
+- hunspell-dict-ko 업데이트(0.6.4)
 ```
 
-2) 생성 스크립트 실행
+3) 생성 스크립트 실행
 ```
 $ ./script/make.py 새 버전
-예) ./script/make.py 0.6.4
+예) ./script/make.py 0.7.1
 ```
 
-3) 새로 생성된 플러그인
+4) 새로 생성된 플러그인 위치
 ```
 bin/Korean_spell-checker-버전-1_FF.xpi
 bin/Korean_spell-checker-버전-1_LibO.oxt
