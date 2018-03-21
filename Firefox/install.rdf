@@ -6,13 +6,13 @@
     <em:id>ko-KR@dictionaries.addons.mozilla.org</em:id>
 	<em:type>64</em:type>
     <em:unpack>true</em:unpack>
-    <em:version>0.6.4-1</em:version>
+    <em:version>0.6.40.7.10.7.10.7.10.7.1-1</em:version>
     <em:creator>Jihui Choi</em:creator>
     <em:contributor>Changwoo Ryu</em:contributor>
     <em:homepageURL>http://addons.mozilla.org/en-US/firefox/addon/korean-spellchecker/</em:homepageURL>
     <em:targetApplication>
       <Description>
-     <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+     <em:id>{ec8030f7-c20a-464f-9b0e0.7.10.7.10.7.10.7.1-13a3a9e97384}</em:id>
 	<em:minVersion>3.0</em:minVersion>
 	<em:maxVersion>*</em:maxVersion>
       </Description>
