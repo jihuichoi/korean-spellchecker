@@ -48,7 +48,7 @@ $ vi Firefox/Changelog
 
 다음 예시와 같은 형식으로 추가
 0.7.1-1 (2018/03/21)
-- hunspell-dict-ko 업데이트(0.6.4)
+- hunspell-dict-ko 업데이트(0.7.1)
 ```
 
 3) 생성 스크립트 실행
