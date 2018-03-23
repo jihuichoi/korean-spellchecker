@@ -17,6 +17,9 @@ and it follows the license of 'hunspell 한국어 데이터' project.
 
 ----------
 
+0.7.1-2 (2018/03/24)
+- 버그 수정
+
 0.7.1-1 (2018/03/21)
 - hunspell-dict-ko 업데이트(0.7.1)
 
