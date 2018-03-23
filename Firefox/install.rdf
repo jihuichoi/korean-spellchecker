@@ -4,27 +4,41 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:id>ko-KR@dictionaries.addons.mozilla.org</em:id>
+    <em:version>0.7.1-1</em:version>
 	<em:type>64</em:type>
     <em:unpack>true</em:unpack>
-    <em:version>0.6.40.7.10.7.10.7.10.7.1-1</em:version>
+    <em:name>Korean Dictionary</em:name>
+    <em:description>Korean (ko-KR) Spellchecking Dictionary</em:description>
     <em:creator>Jihui Choi</em:creator>
     <em:contributor>Changwoo Ryu</em:contributor>
     <em:homepageURL>http://addons.mozilla.org/en-US/firefox/addon/korean-spellchecker/</em:homepageURL>
+    
+    <!-- Firefox -->
     <em:targetApplication>
-      <Description>
-     <em:id>{ec8030f7-c20a-464f-9b0e0.7.10.7.10.7.10.7.1-13a3a9e97384}</em:id>
-	<em:minVersion>3.0</em:minVersion>
-	<em:maxVersion>*</em:maxVersion>
+		<Description>
+			<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+			<em:minVersion>18.0a1</em:minVersion>
+			<em:maxVersion>*</em:maxVersion>
       </Description>
     </em:targetApplication>
+    
+    <!-- Thunderbird -->
     <em:targetApplication>
       <Description>
-     <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-	<em:minVersion>2.0</em:minVersion>
-	<em:maxVersion>55.0</em:maxVersion>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>18.0a1</em:minVersion>
+        <em:maxVersion>*</em:maxVersion>
       </Description>
     </em:targetApplication>
-    <em:name>Korean Dictionary</em:name>
-    <em:description>Korean (ko-KR) Spellchecking Dictionary</em:description>
+    
+    <!-- SeaMonkey -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+        <em:minVersion>2.15a1</em:minVersion>
+        <em:maxVersion>*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
   </Description>
 </RDF>
