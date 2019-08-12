@@ -35,6 +35,11 @@ and it follows the license of 'hunspell 한국어 데이터' project.
 
 ## 플러그인 생성
 
+0) 전제
+- Unix 호환 환경
+- python3 설치
+- zip 설치
+
 1) 소스 다운로드
 ```
 $ git clone https://github.com/jihuichoi/korean-spellchecker.git korean-spellchecker
